@@ -3,30 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const NavBar = () => {
-  interface CustomLinkProps {
-    href: string;
-    children: string;
-  }
-  const CustomLink = ({ href, children }: CustomLinkProps) => {
-    const scrollToSection = () => {
-      const anchor = document.querySelector(href);
-      anchor!.scrollIntoView({ behavior: "smooth", block: "center" });
-    };
-    return (
-      <>
-        <a
-          className="py-2 px-4 hover:cursor-pointer hover:backdrop-brightness-90 rounded-lg"
-          onClick={scrollToSection}
-        >
-          {children}
-        </a>
-      </>
-    );
-  };
-
   return (
-    <div className="py-3 rounded">
-      <div className="container flex flex-wrap justify-between items-center ">
+    <div className="py-3 sticky top-0 z-50 bg-white border-slate-300 border-b">
+      <div className="flex flex-wrap justify-between items-center ">
         <div className="flex items-center gap-2 pr-10">
           <a href="/" className="font-mono font-bold text-2xl">
             Evan
@@ -42,4 +21,24 @@ const NavBar = () => {
   );
 };
 
+interface CustomLinkProps {
+  href: string;
+  children: string;
+}
+const CustomLink = ({ href, children }: CustomLinkProps) => {
+  const scrollToSection = () => {
+    const anchor = document.querySelector(href);
+    anchor!.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+  return (
+    <>
+      <a
+        className="py-2 px-4 hover:cursor-pointer hover:backdrop-brightness-90 rounded-lg"
+        onClick={scrollToSection}
+      >
+        {children}
+      </a>
+    </>
+  );
+};
 export default NavBar;

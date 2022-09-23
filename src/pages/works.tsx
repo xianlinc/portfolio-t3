@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 const Works = () => {
   return (
-    <div className="max-w-[1240px] w-full h-screen px-12 mx-auto">
+    <div className="relative max-w-[1240px] w-full h-screen px-12 mx-auto">
       <NavBar />
       <div className="mx-auto">
         <Grid />
