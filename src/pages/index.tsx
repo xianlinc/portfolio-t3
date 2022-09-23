@@ -151,11 +151,42 @@ const ExperienceCard = () => {
         />
       </div>
       <h1 className="text-3xl">Here I used:</h1>
+      <div className="flex flex-row">
+        <ol className="flex flex-row gap-4">
+          <SkillIcon name="C#" skillIcon={csharpIcon} />
+          <SkillIcon name="visualstudio" skillIcon={vsIcon} />
+          <SkillIcon name="Javascript" skillIcon={javascriptIcon} />
+          <SkillIcon name="React" skillIcon={reactIcon} />
+          <SkillIcon name="Git" skillIcon={gitIcon} />
+        </ol>
+      </div>
     </div>
   );
 };
 
 const EXB = ({ text }: { text: string }) => {
   return <p className="border-l-4 border-blue-600 my-2 px-1">{text}</p>;
+};
+
+const Projects = () => {
+  return (
+    <div
+      id="projects"
+      className="max-w-[1240px] w-full mx-auto p-2 flex justify-start items-center"
+    >
+      <h1 className="text-4xl font-bold">Featured Projects</h1>
+    </div>
+  );
+};
+
+const Clubs = () => {
+  return (
+    <div
+      id="clubs"
+      className="max-w-[1240px] w-full mx-auto p-2 flex justify-start items-center"
+    >
+      <h1 className="text-4xl font-bold">Clubs</h1>
+    </div>
+  );
 };
 export default Home;
