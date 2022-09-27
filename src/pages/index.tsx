@@ -34,23 +34,27 @@ const Home: NextPage = () => {
         <About />
         <Skills />
         <Experience />
-        <Contact />
+        <div className="h-10"></div>
       </div>
-      <Footer />
+      <Contact />
     </>
   );
 };
 
 const Hero = () => {
   return (
-    <div className="max-w-[1240px] w-full h-screen mx-auto p-2 flex justify-start items-center">
+    <div
+      id="hero"
+      className="max-w-[1240px] w-full h-screen mx-auto p-2 flex justify-start items-center"
+    >
       <div>
         <p className="text-4xl font-bold">Hi! I&apos;m Evan!</p>
         <p className="text-4xl">
-          I enjoy building applications to solve everyday problems I encounter.
+          I enjoy building software solutions to automate and solve problems I
+          encounter.
         </p>
         <p className="text-xl">
-          I enjoy tinkering and building solutions to increase productivity!
+          Software Developer &#65372; Penultimate year CS Undergrad @ NUS
         </p>
       </div>
       <Image
@@ -250,20 +254,15 @@ const Clubs = () => {
 
 const Contact = () => {
   return (
-    <div
-      id="contact"
-      className="max-w-[1240px] w-full mx-auto p-2 flex justify-start items-center"
-    >
-      <div className="space-y-4">
-        <h1 className="text-4xl font-bold">Contact Me</h1>
-        <div className="flex gap-12 flex-wrap">
-          <p className="text-xl">
-            <span className="font-semibold">Email: </span>
-            <br /> xianlinchng@gmail.com
+    <div id="contact" className="border-t w-full mx-auto py-5 p-2 items-center">
+      <div className="space-y-4 text-center">
+        <div className="flex gap-12 flex-wrap justify-around">
+          <p className="text-sm">
+            <p className="font-semibold">Email</p>
+            xianlinchng@gmail.com
           </p>
-          <p className="text-xl">
-            <span className="font-semibold">Github: </span>
-            <br />
+          <p className="text-sm">
+            <p className="font-semibold">Github</p>
             <a
               target="_blank"
               rel="noreferrer"
@@ -272,9 +271,8 @@ const Contact = () => {
               www.github.com/xianlinc
             </a>
           </p>
-          <p className="text-xl">
-            <span className="font-semibold">Linkedin: </span>
-            <br />
+          <p className="text-sm">
+            <p className="font-semibold">Linkedin </p>
             <a
               target="_blank"
               rel="noreferrer"
@@ -289,41 +287,4 @@ const Contact = () => {
   );
 };
 
-const Footer = () => {
-  return (
-    <>
-      <footer className="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6">
-        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © 2022{" "}
-          <Link href="#" className="hover:underline">
-            Evan&apos;s page
-          </Link>
-          . All Rights Reserved.
-        </span>
-        <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
-          <li>
-            <Link href="#" className="mr-4 hover:underline md:mr-6 ">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="mr-4 hover:underline md:mr-6">
-              Privacy Policy
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="mr-4 hover:underline md:mr-6">
-              Licensing
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="hover:underline">
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </footer>
-    </>
-  );
-};
 export default Home;
