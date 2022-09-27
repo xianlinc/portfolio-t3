@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import NavBar from "./Nav";
 import evanPhoto from "/public/evan_photo.jpg";
 import csharpIcon from "/public/csharp.svg";
@@ -263,14 +264,22 @@ const Contact = () => {
           <p className="text-xl">
             <span className="font-semibold">Github: </span>
             <br />
-            <a target="_blank" href="https://www.github.com/xianlinc">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.github.com/xianlinc"
+            >
               www.github.com/xianlinc
             </a>
           </p>
           <p className="text-xl">
             <span className="font-semibold">Linkedin: </span>
             <br />
-            <a target="_blank" href="https://www.linkedin.com/in/xianlinchng/">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/xianlinchng/"
+            >
               https://www.linkedin.com/in/xianlinchng/
             </a>
           </p>
@@ -286,31 +295,31 @@ const Footer = () => {
       <footer className="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2022{" "}
-          <a href="#" className="hover:underline">
-            Evan's page
-          </a>
+          <Link href="#" className="hover:underline">
+            Evan&apos;s page
+          </Link>
           . All Rights Reserved.
         </span>
         <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
           <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6 ">
+            <Link href="#" className="mr-4 hover:underline md:mr-6 ">
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
+            <Link href="#" className="mr-4 hover:underline md:mr-6">
               Privacy Policy
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
+            <Link href="#" className="mr-4 hover:underline md:mr-6">
               Licensing
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:underline">
+            <Link href="#" className="hover:underline">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </footer>
