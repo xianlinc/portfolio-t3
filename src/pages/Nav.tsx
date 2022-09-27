@@ -1,21 +1,18 @@
-import csharpIcon from "/public/csharp.svg";
-import Image from "next/image";
-import Link from "next/link";
-
 const NavBar = () => {
   return (
-    <div className="py-3 sticky top-0 z-50 bg-white border-slate-300 border-b">
-      <div className="flex flex-wrap justify-between items-center ">
-        <div className="flex items-center gap-2 pr-10">
-          <a href="/" className="font-mono font-bold text-2xl">
+    <div className="max-width-[1240px] w-full px-10 items-center mx-auto">
+      <div className="py-3 sticky top-0 z-50 bg-white border-slate-300 border-b">
+        <div className="flex justify-between">
+          <a href="/" className="font-mono font-bold text-2xl ml-0">
             Evan
           </a>
+          <div className="flex flex-wrap justify-end items-center ">
+            <CustomLink href="#about">About me</CustomLink>
+            <CustomLink href="#skills">Skills</CustomLink>
+            <CustomLink href="#experience">Experience</CustomLink>
+            <CustomLink href="#contact">Contact Me</CustomLink>
+          </div>
         </div>
-        <CustomLink href="#about">About me</CustomLink>
-        <CustomLink href="#skills">Skills</CustomLink>
-        <CustomLink href="#experience">Experience</CustomLink>
-        <CustomLink href="#projects">Projects</CustomLink>
-        <CustomLink href="#contact">Contact Me</CustomLink>
       </div>
     </div>
   );
