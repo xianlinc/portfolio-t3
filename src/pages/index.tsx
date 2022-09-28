@@ -257,11 +257,11 @@ const Contact = () => {
     <div id="contact" className="border-t w-full mx-auto py-5 p-2 items-center">
       <div className="space-y-4 text-center">
         <div className="flex gap-12 flex-wrap justify-around">
-          <p className="text-sm">
+          <div className="text-sm">
             <p className="font-semibold">Email</p>
             xianlinchng@gmail.com
-          </p>
-          <p className="text-sm">
+          </div>
+          <div className="text-sm">
             <p className="font-semibold">Github</p>
             <a
               target="_blank"
@@ -270,8 +270,8 @@ const Contact = () => {
             >
               www.github.com/xianlinc
             </a>
-          </p>
-          <p className="text-sm">
+          </div>
+          <div className="text-sm">
             <p className="font-semibold">Linkedin </p>
             <a
               target="_blank"
@@ -280,7 +280,7 @@ const Contact = () => {
             >
               https://www.linkedin.com/in/xianlinchng/
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </div>
